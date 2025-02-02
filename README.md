@@ -30,7 +30,7 @@ This is a web-based Quiz Application developed using **React, Tailwind CSS, and 
 
 1. Clone the repository:
    ```bash
-[   git clone https://github.com/your-repo/quiz-app.git](https://github.com/Prashantpal123/Assignment.git)
+[  git clone https://github.com/your-repo/quiz-app.git](https://github.com/Prashantpal123/Assignment.git)](https://github.com/Prashantpal123/Assignment.git)
    ```
 2. Navigate to the project directory:
    
@@ -43,7 +43,7 @@ This is a web-based Quiz Application developed using **React, Tailwind CSS, and 
    ```bash
    npm run dev
    ```
-5. Open your browser and visit: `http://localhost:5173/` or check curren server
+5. Open your browser and visit: `http://localhost:5173/` or check current server
 
 ## 🤝 Contributing
 
