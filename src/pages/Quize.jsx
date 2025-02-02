@@ -15,8 +15,9 @@ const Quiz = () => {
   const [attemptedQuestions, setAttemptedQuestions] = useState(0);
   const navigate = useNavigate();
    const name=formData.name;
+   const testsize=formData.ques_num;
 const handleSubmit = () => {
-  navigate("/result", { state: { score, timeLeft,name   }  });
+  navigate("/result", { state: { userAnswers,data, score, timeLeft,name,attemptedQuestions,testsize   }  });
 };
 
   useEffect(() => {
@@ -55,6 +56,10 @@ const handleSubmit = () => {
       const newAnswers = { ...prevAnswers };
       const prevSelected = newAnswers[currentQuestion];
 
+      if (!prevSelected) {
+        setAttemptedQuestions((prev) => prev + 1);
+      }
+
       if (prevSelected && prevSelected.is_correct) {
         setScore((prevScore) => prevScore - 1);
       }
@@ -66,13 +71,14 @@ const handleSubmit = () => {
       } 
       console.log(score);
       
-
+     console.log(attemptedQuestions);
+     
       return newAnswers;
     });
   };
 
   const handleNext = () => {
-    if (currentQuestion < data.questions.length - 1) {
+    if (currentQuestion <testsize- 1) {
       setCurrentQuestion((prev) => prev + 1);
     }
   };
@@ -83,7 +89,8 @@ const handleSubmit = () => {
     }
   };
 
-  if (loading) return <p>Loading questions...</p>;
+  if (loading) return <div   className="flex full-screen-black justify-center"> <div className="flex flex-col items-center"><p className="     full-screen-black w-full  text-[28px] text-zinc-50
+  md:mt-4 leading-13 md:text-[60px] lg:text-[60px] font-extrabold md:leading-">Loading  <span className="text-[#fcbb38]">Questions...</span></p></div>;</div> 
   if (error) return <p>Error: {error}</p>;
 
   return (
@@ -156,7 +163,7 @@ const handleSubmit = () => {
                   : "bg-gray-300 cursor-not-allowed"
               }`}
               onClick={handleNext}
-              disabled={currentQuestion === data.questions.length - 1}
+              disabled={currentQuestion === testsize - 1}
             >
               Next
             </button>
