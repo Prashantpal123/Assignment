@@ -21,10 +21,10 @@ This is a web-based Quiz Application developed using **React, Tailwind CSS, and 
 
 ## 🎯 How to Use
 
-1. Select a quiz category.
+1. Select quize settings.
 2. Answer multiple-choice questions.
 3. Submit the quiz to view results.
-4. Check the summary page for correct answers.
+4. Check the summary page for review answers.
 
 ## 📥 Installation & Setup
 
