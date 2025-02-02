@@ -5,10 +5,10 @@ import App from './App.jsx'
 import { DataProvider } from './context/quizeData.jsx'
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+ 
 <DataProvider>
 
     <App />
     </DataProvider>
-  </StrictMode>,
+  
 )
