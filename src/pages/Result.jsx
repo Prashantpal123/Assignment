@@ -27,7 +27,7 @@ const Result = ({ userName, total, onFullReport }) => {
           <p className="mb-2"><strong>📈 Accuracy:</strong> {accuracy}%</p>
         </div>
         <button
-          className="mt-6 px-5 py-3 bg-yellow-400 text-gray-900 font-bold rounded-lg hover:bg-yellow-500 transition-transform transform hover:scale-105 shadow-md"
+          className="mt-6 px-5 py-3 hover:cursor-pointer bg-yellow-400 text-gray-900 font-bold rounded-lg hover:bg-yellow-500 transition-transform transform hover:scale-105 shadow-md"
           onClick={() => navigate("/summary", { state: { userAnswers, data, name ,score,timeLeft,attemptedQuestions,accuracy,testsize } })}
         >
           📜 View Detailed Report

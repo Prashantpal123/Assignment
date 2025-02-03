@@ -44,7 +44,9 @@ const handleSubmit = () => {
       }, 1000);
       return () => clearTimeout(timer);
     } else {
-      alert("Time's up! Please select an answer.");
+     {
+      handleSubmit();
+     }
     }
   }, [timeLeft]);
 
